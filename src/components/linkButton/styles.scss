@@ -1,0 +1,68 @@
+.link-button-box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 40px;
+	gap: 10px;
+
+	.first-button-box {
+		display: flex;
+		flex: 1;
+		background: #31AE84;
+		overflow: hidden;
+		cursor: pointer;
+		transition: all 0.2s ease-in-out;
+		border-radius: 5px;
+
+		&:hover {
+			background: #42665A;
+
+			.icon-area {
+				background: #31AE84;
+			}
+		}
+
+		.icon-area {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			background: #27E8A7;
+
+
+		}
+
+		.text-area {
+			display: flex;
+			flex: 1;
+			flex-direction: row;
+			align-items: center;
+			padding: 5px;
+
+			p {
+				font-size: 1rem;
+				color: #fff;
+				font-weight: 500;
+			}
+		}
+	}
+
+	.copy-button {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 5px;
+		background: #DF4577;
+		transition: all 0.2s ease-in-out;
+
+		&:hover {
+			background: #bb325d;
+			cursor: pointer;
+		}
+	}
+}

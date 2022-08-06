@@ -1,5 +1,6 @@
 import "./App.scss";
 import LinkButton from "./components/linkButton";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 function App() {
 	return (
@@ -12,10 +13,10 @@ function App() {
 			<div className="content-container">
 				<div className="content-area">
 					<LinkButton
-						icon=""
+						Icon={IoLogoWhatsapp}
 						text="Whatsapp"
 						href=""
-						backgroundColor="#1db954"
+						color="#1db954"
 					/>
 				</div>
 			</div>

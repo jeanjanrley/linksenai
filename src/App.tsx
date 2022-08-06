@@ -14,9 +14,18 @@ function App() {
 				<div className="content-area">
 					<LinkButton
 						Icon={IoLogoWhatsapp}
-						text="Whatsapp"
+						text="Portal do Aluno"
 						href=""
-						color="#1db954"
+					/>
+					<LinkButton
+						Icon={IoLogoWhatsapp}
+						text="Classroom"
+						href=""
+					/>
+					<LinkButton
+						Icon={IoLogoWhatsapp}
+						text="Grupo da Turma"
+						href=""
 					/>
 				</div>
 			</div>

@@ -7,20 +7,19 @@ interface LinkButtonProps {
 	Icon: IconType;
 	href: string;
 	text: string;
-	color: string;
 }
 
-export default function LinkButton({ Icon, href, text, color }: LinkButtonProps) {
+export default function LinkButton({ Icon, href, text }: LinkButtonProps) {
 	return (
 		<div className="link-button-box">
-			<div className="first-button-box">
+			<a className="first-button-box" href={href} target="_blak">
 				<div className="icon-area">
 					<Icon size={18} color="#fff" />
 				</div>
 				<div className="text-area">
 					<p>{text}</p>
 				</div>
-			</div>
+			</a>
 
 			<div className="copy-button"
 				onClick={() => {

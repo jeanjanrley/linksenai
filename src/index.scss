@@ -5,10 +5,47 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+p {
 	text-decoration: none;
+	font-size: 0.7rem;
 }
 
 :root {
 	background: #232937;
+}
+
+@media (min-width: 375px) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	span,
+	a,
+	p {
+		font-size: 0.8rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	span,
+	a,
+	p {
+		font-size: 1rem;
+	}
 }

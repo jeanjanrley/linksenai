@@ -1,6 +1,8 @@
 import "./App.scss";
 import LinkButton from "./components/linkButton";
 import { IoLogoWhatsapp } from "react-icons/io";
+import { GiHouse } from "react-icons/gi";
+import { CgWebsite } from "react-icons/cg";
 
 function App() {
 	return (
@@ -13,20 +15,29 @@ function App() {
 			<div className="content-container">
 				<div className="content-area">
 					<LinkButton
-						Icon={IoLogoWhatsapp}
+						Icon={GiHouse}
 						text="Portal do Aluno"
-						href=""
+						href="https://senaiweb6.fieb.org.br/framehtml/web/app/edu/PortalEducacional/login/"
 					/>
 					<LinkButton
-						Icon={IoLogoWhatsapp}
+						Icon={CgWebsite}
 						text="Classroom"
-						href=""
+						href="https://classroom.google.com/u"
 					/>
 					<LinkButton
 						Icon={IoLogoWhatsapp}
 						text="Grupo da Turma"
-						href=""
+						href="https://chat.whatsapp.com/KBohZV9mUXVFlNVKMb9YFu"
 					/>
+				</div>
+				<div className="warn-area">
+					<div className="warn-box">
+						<p className="warn-text">
+							Estes são alguns links importantes para a turma, como o portal do aluno,
+							o classroom e o grupo da turma no Whatsapp. Para sugerir ideias ou reportar algum erro,
+							sinta-se a vontade para comunicar no grupo.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>

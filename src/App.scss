@@ -81,4 +81,16 @@
 			font-weight: 400;
 		}
 	}
+
+	footer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 60px 0;
+
+		img {
+			height: 55px;
+		}
+	}
 }

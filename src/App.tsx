@@ -3,6 +3,7 @@ import LinkButton from "./components/linkButton";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { GiHouse } from "react-icons/gi";
 import { CgWebsite } from "react-icons/cg";
+import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png";
 
 function App() {
 	return (
@@ -39,6 +40,9 @@ function App() {
 						</p>
 					</div>
 				</div>
+				<footer>
+					<img src={LogomarcaCowmiBranca} alt="Logormarca Cowimi - Branca" />
+				</footer>
 			</div>
 		</div>
 	);

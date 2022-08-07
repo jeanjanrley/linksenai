@@ -7,8 +7,8 @@ import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png"
 
 function App() {
 
-	const password = import.meta.env.PROD ? process.env.GROUP_PASSWORD : import.meta.env.VITE_GROUP_PASSWORD;
-	const url = import.meta.env.PROD ? process.env.GROUP_URL : import.meta.env.VITE_GROUP_URL;
+	const password = import.meta.env.VITE_GROUP_PASSWORD;
+	const url = import.meta.env.VITE_GROUP_URL;
 
 	return (
 		<div className="App">

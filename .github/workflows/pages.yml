@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  envkey_GROUP_PASSWORD: ${{ secrets.GROUP_PASSWORD }}
-  envkey_GROUP_URL: ${{ secrets.GROUP_URL }}
+  GROUP_PASSWORD: ${{ secrets.GROUP_PASSWORD }}
+  GROUP_URL: ${{ secrets.GROUP_URL }}
   file_name: .env
 
 jobs:

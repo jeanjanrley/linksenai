@@ -20,7 +20,7 @@ jobs:
           node-version: 16
 
         env:
-          VITE_GROUP_PASSWORD: "#Canibais2022"
+          VITE_GROUP_PASSWORD: ${{ secrets.VITE_GROUP_PASSWORD }}
           VITE_GROUP_URL: ${{ secrets.VITE_GROUP_URL }}
 
       - name: Install dependencies

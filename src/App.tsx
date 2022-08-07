@@ -5,10 +5,10 @@ import { GiHouse } from "react-icons/gi";
 import { CgWebsite } from "react-icons/cg";
 import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png";
 
-function App() {
 
-	const password = import.meta.env.VITE_GROUP_PASSWORD;
-	const url = import.meta.env.VITE_GROUP_URL;
+function App() {
+	const password = import.meta.env.PROD ? process.env.VITE_GROUP_PASSWORD : import.meta.env.VITE_GROUP_PASSWORD;
+	const url = import.meta.env.PROD ? process.env.VITE_GROUP_URL : import.meta.env.VITE_GROUP_URL;
 
 	return (
 		<div className="App">

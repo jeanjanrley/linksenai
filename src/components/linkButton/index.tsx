@@ -14,7 +14,7 @@ export default function LinkButton({ Icon, href, text }: LinkButtonProps) {
 		<div className="link-button-box">
 			<a className="first-button-box" href={href} target="_blak">
 				<div className="icon-area">
-					<Icon size={18} color="#fff" />
+					<Icon size={20} color="#fff" />
 				</div>
 				<div className="text-area">
 					<p>{text}</p>
@@ -31,7 +31,7 @@ export default function LinkButton({ Icon, href, text }: LinkButtonProps) {
 					}
 				}}
 			>
-				<BiCopy color="#fff" size={18} />
+				<BiCopy color="#fff" size={20} />
 			</div>
 		</div>
 	);

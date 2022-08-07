@@ -6,6 +6,10 @@ import { CgWebsite } from "react-icons/cg";
 import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png";
 
 function App() {
+
+	const password = import.meta.env.PROD ? process.env.GROUP_PASSWORD : import.meta.env.VITE_GROUP_PASSWORD;
+	const url = import.meta.env.PROD ? process.env.GROUP_URL : import.meta.env.VITE_GROUP_URL;
+
 	return (
 		<div className="App">
 			<div className="header-container">
@@ -29,8 +33,8 @@ function App() {
 						havePassword={true}
 						Icon={IoLogoWhatsapp}
 						text="Grupo da Turma"
-						password={import.meta.env.VITE_GROUP_PASSWORD}
-						href={import.meta.env.VITE_GROUP_URL}
+						password={password}
+						href={url}
 					/>
 				</div>
 				<div className="warn-area">

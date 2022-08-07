@@ -6,8 +6,8 @@ on:
       - main
 
 env:
-  GROUP_PASSWORD: ${{ secrets.GROUP_PASSWORD }}
-  GROUP_URL: ${{ secrets.GROUP_URL }}
+  GROUP_PASSWORD: ${{ import.meta.env.VITE_GROUP_PASSWORD }}
+  GROUP_URL: ${{ import.meta.env.VITE_GROUP_PASSWORD }}
   file_name: .env
 
 jobs:

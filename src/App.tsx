@@ -30,7 +30,7 @@ function App() {
 						Icon={IoLogoWhatsapp}
 						text="Grupo da Turma"
 						password={import.meta.env.VITE_GROUP_PASSWORD}
-						href="https://chat.whatsapp.com/KBohZV9mUXVFlNVKMb9YFu"
+						href={import.meta.env.VITE_GROUP_URL}
 					/>
 				</div>
 				<div className="warn-area">

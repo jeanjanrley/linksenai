@@ -26,8 +26,10 @@ function App() {
 						href="https://classroom.google.com/u"
 					/>
 					<LinkButton
+						havePassword={true}
 						Icon={IoLogoWhatsapp}
 						text="Grupo da Turma"
+						password={import.meta.env.VITE_GROUP_PASSWORD}
 						href="https://chat.whatsapp.com/KBohZV9mUXVFlNVKMb9YFu"
 					/>
 				</div>

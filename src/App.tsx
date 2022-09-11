@@ -3,12 +3,16 @@ import LinkButton from "./components/linkButton";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { GiHouse } from "react-icons/gi";
 import { CgWebsite } from "react-icons/cg";
+import { FaDiscord } from "react-icons/fa";
 import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png";
 
 
 function App() {
 	const password = import.meta.env.VITE_GROUP_PASSWORD;
-	const url = import.meta.env.VITE_GROUP_URL;
+	const passwordAlunos = import.meta.env.VITE_GROUP_PASSWORD_ALUNOS;
+	const urlGrupoDaTurma = import.meta.env.VITE_GROUP_URL;
+	const urlGrupoDaTurmaSomenteAlunos = import.meta.env.VITE_GROUP_URL_ALUNOS;
+	const urlDiscord = import.meta.env.VITE_DISCORD_URL;
 
 	return (
 		<div className="App">
@@ -34,7 +38,21 @@ function App() {
 						Icon={IoLogoWhatsapp}
 						text="Grupo da Turma"
 						password={password}
-						href={url}
+						href={urlGrupoDaTurma}
+					/>
+					<LinkButton
+						havePassword={true}
+						Icon={IoLogoWhatsapp}
+						text="Grupo da Turma (Somente Alunos)"
+						password={passwordAlunos}
+						href={urlGrupoDaTurmaSomenteAlunos}
+					/>
+					<LinkButton
+						havePassword={true}
+						Icon={FaDiscord}
+						text="Grupo no Discord"
+						password={password}
+						href={urlDiscord}
 					/>
 				</div>
 				<div className="warn-area">

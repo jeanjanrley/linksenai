@@ -13,31 +13,71 @@ interface LinkButtonProps {
 }
 
 export default function LinkButton({ Icon, href, text, password, havePassword }: LinkButtonProps) {
+
+	interface RedirectPageType {
+		callback?: any;
+	}
+
+	const passwordVerify = ({ callback }: RedirectPageType) => {
+		if (havePassword) {
+			Swal.fire({
+				title: "Digite a senha para acessar essa funcionalidade",
+				input: "password",
+				showCancelButton: true,
+				allowEnterKey: true,
+				inputPlaceholder: "Senha do grupo",
+				inputValidator: async (value) => {
+					if (value === password) {
+						callback?.();
+						return value;
+					} else {
+						Swal.fire("Senha incorreta!", "", "error");
+						return "Senha incorreta!";
+					}
+				}
+			});
+		} else {
+			callback?.();
+		}
+	};
+
+	interface CallbackTypes {
+		title: string;
+		message?: string;
+	}
+
+	const copyLink = ({ title, message }: CallbackTypes) => {
+		try {
+			navigator.clipboard.writeText(href);
+			Swal.fire(title, message, "success");
+		}
+		catch (error) {
+			console.log(error);
+			Swal.fire("Erro", "houve um erro ao copiar o texto", "error");
+		}
+	};
+
+	const redirectPage = ({ title, message }: CallbackTypes) => {
+		try {
+			window.open(href, "_blank");
+			Swal.fire(title, message, "success");
+		}
+		catch (error) {
+			console.log(error);
+			Swal.fire("Erro", "houve um erro ao te direcionar para o link!", "error");
+		}
+	};
+
 	return (
 		<div className="link-button-box">
 			<div
 				className="first-button-box"
 				onClick={() => {
-					if (havePassword) {
-						Swal.fire({
-							title: "Digite a senha para acessar o grupo!",
-							input: "password",
-							showCancelButton: true,
-							allowEnterKey: true,
-							inputPlaceholder: "Senha do grupo",
-							inputValidator: async (value) => {
-								if (value === password) {
-									Swal.fire("Acesso permitido!", "Você será redirecionado para o grupo!", "success");
-									window.open(href, "_blank");
-									return value;
-								} else {
-									return "Senha incorreta!";
-								}
-							}
-						});
-					} else {
-						window.open(href, "_blank");
-					}
+					passwordVerify({
+						callback: () => redirectPage({
+							title: "Você será redirecionado!",
+						})
+					});
 				}}
 			>
 				<div className="icon-area">
@@ -50,12 +90,11 @@ export default function LinkButton({ Icon, href, text, password, havePassword }:
 
 			<div className="copy-button"
 				onClick={() => {
-					try {
-						navigator.clipboard.writeText(href);
-						window.alert("Link copiado para a área de transferência!");
-					} catch (error) {
-						console.log(error);
-					}
+					passwordVerify({
+						callback: () => copyLink({
+							title: "Texto copiado com sucesso!",
+						})
+					});
 				}}
 			>
 				<BiCopy color="#fff" size={20} />

@@ -18,7 +18,7 @@ A página foi criada no conceito Mobile First (Com foco primeiramente no mobile)
 ##
 
 <div>
-<a href="https://jeanjanrley.github.io/linksenai/" target="_blank"><strong>Link da página:</strong>	https://jeanjanrley.github.io/linksenai/</a>
+<a href="https://linksenai.vercel.app/" target="_blank"><strong>Link da página:</strong> https://linksenai.vercel.app/</a>
 </div>
 
 ##

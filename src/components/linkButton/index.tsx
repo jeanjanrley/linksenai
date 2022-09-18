@@ -49,7 +49,7 @@ export default function LinkButton({ Icon, href, text, password, havePassword, t
 	}
 
 	function defineLink() {
-		const downloadUrl = import.meta.env.DEV ? href : `${import.meta.env.VERCEL_URL}${href}`;
+		const downloadUrl = import.meta.env.DEV ? href : `${import.meta.env.VITE_VERCEL_URL}${href}`;
 		const result = type === "download" ? downloadUrl : href;
 		return result;
 	}

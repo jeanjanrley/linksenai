@@ -48,9 +48,17 @@ export default function LinkButton({ Icon, href, text, password, havePassword, t
 		message?: string;
 	}
 
+	function defineLink() {
+		const downloadUrl = import.meta.env.DEV ? href : `${import.meta.env.VERCEL_URL}${href}`;
+		const result = type === "download" ? downloadUrl : href;
+		return result;
+	}
+
 	const copyLink = ({ title, message }: CallbackTypes) => {
 		try {
-			navigator.clipboard.writeText(href);
+
+			const text = defineLink();
+			navigator.clipboard.writeText(text);
 			Swal.fire(title, message, "success");
 		}
 		catch (error) {

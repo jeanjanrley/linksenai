@@ -10,9 +10,11 @@ interface LinkButtonProps {
 	text: string;
 	password?: string;
 	havePassword?: boolean;
+	type?: "link" | "download";
+	showSwal?: boolean;
 }
 
-export default function LinkButton({ Icon, href, text, password, havePassword }: LinkButtonProps) {
+export default function LinkButton({ Icon, href, text, password, havePassword, type = "link", showSwal = true }: LinkButtonProps) {
 
 	interface RedirectPageType {
 		callback?: any;
@@ -75,7 +77,7 @@ export default function LinkButton({ Icon, href, text, password, havePassword }:
 				onClick={() => {
 					passwordVerify({
 						callback: () => redirectPage({
-							title: "Você será redirecionado!",
+							title: type === "link" ? "Você será redirecionado!" : "Download efetuado com sucesso!",
 						})
 					});
 				}}

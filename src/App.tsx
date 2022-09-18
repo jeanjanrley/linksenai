@@ -5,7 +5,8 @@ import { GiHouse } from "react-icons/gi";
 import { CgWebsite } from "react-icons/cg";
 import { FaDiscord } from "react-icons/fa";
 import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png";
-
+import calendario from "./assets/downloads/calendario.pdf";
+import matriz from "./assets/downloads/matriz.pdf";
 
 function App() {
 	const password = import.meta.env.VITE_GROUP_PASSWORD;
@@ -23,6 +24,18 @@ function App() {
 			</div>
 			<div className="content-container">
 				<div className="content-area">
+					<LinkButton
+						Icon={GiHouse}
+						text="Calendário de aulas"
+						href={calendario}
+						type="download"
+					/>
+					<LinkButton
+						Icon={GiHouse}
+						text="Matriz Curricular"
+						href={matriz}
+						type="download"
+					/>
 					<LinkButton
 						Icon={GiHouse}
 						text="Portal do Aluno"

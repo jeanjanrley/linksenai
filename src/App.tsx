@@ -8,6 +8,7 @@ import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png"
 import calendario from "./assets/downloads/calendario.pdf";
 import matriz from "./assets/downloads/matriz.pdf";
 import { BiCopy } from "react-icons/bi";
+import { FiDownload } from "react-icons/fi";
 import Swal from "sweetalert2";
 
 function App() {
@@ -44,13 +45,13 @@ function App() {
 				</div>
 				<div className="content-area">
 					<LinkButton
-						Icon={GiHouse}
+						Icon={FiDownload}
 						text="Calendário de aulas"
 						href={calendario}
 						type="download"
 					/>
 					<LinkButton
-						Icon={GiHouse}
+						Icon={FiDownload}
 						text="Matriz Curricular"
 						href={matriz}
 						type="download"

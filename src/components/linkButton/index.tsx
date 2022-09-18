@@ -14,7 +14,7 @@ interface LinkButtonProps {
 	showSwal?: boolean;
 }
 
-export default function LinkButton({ Icon, href, text, password, havePassword, type = "link", showSwal = true }: LinkButtonProps) {
+export default function LinkButton({ Icon, href, text, password, havePassword, type = "link" }: LinkButtonProps) {
 
 	interface RedirectPageType {
 		callback?: any;
@@ -83,7 +83,7 @@ export default function LinkButton({ Icon, href, text, password, havePassword, t
 				}}
 			>
 				<div className="icon-area">
-					<Icon size={20} color="#fff" />
+					<Icon size={20} color="#232937" />
 				</div>
 				<div className="text-area">
 					<p>{text}</p>

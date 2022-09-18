@@ -7,6 +7,8 @@ import { FaDiscord } from "react-icons/fa";
 import LogomarcaCowmiBranca from "./assets/images/Logomarca Cowimi - Branca.png";
 import calendario from "./assets/downloads/calendario.pdf";
 import matriz from "./assets/downloads/matriz.pdf";
+import { BiCopy } from "react-icons/bi";
+import Swal from "sweetalert2";
 
 function App() {
 	const password = import.meta.env.VITE_GROUP_PASSWORD;
@@ -14,6 +16,15 @@ function App() {
 	const urlGrupoDaTurma = import.meta.env.VITE_GROUP_URL;
 	const urlGrupoDaTurmaSomenteAlunos = import.meta.env.VITE_GROUP_URL_ALUNOS;
 	const urlDiscord = import.meta.env.VITE_DISCORD_URL;
+
+	const copyTurma = () => {
+		try {
+			navigator.clipboard.writeText("232937");
+			Swal.fire("Sucesso!", "Numero da turma copiado com sucesso!", "success");
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
 	return (
 		<div className="App">
@@ -23,6 +34,14 @@ function App() {
 				</div>
 			</div>
 			<div className="content-container">
+				<div className="sub-header">
+					<p className="warn-text">
+						Turma: 232937
+					</p>
+					<button onClick={copyTurma}>
+						<BiCopy color="#fff" size={20} />
+					</button>
+				</div>
 				<div className="content-area">
 					<LinkButton
 						Icon={GiHouse}

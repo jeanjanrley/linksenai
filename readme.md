@@ -27,5 +27,5 @@ A página foi criada no conceito Mobile First (Com foco primeiramente no mobile)
 	<h1>Mobile</h1>
 	<img src="./public/mobile-sreenshot.jpeg">
 	<h1>Desktop</h1>
-	<img src="./public/desktop-sreenshot.png">
+	<img src="./public/screenshot.png">
 <div>
